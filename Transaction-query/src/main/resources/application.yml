@@ -1,0 +1,31 @@
+
+server:
+  port: 8088
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+spring:
+  application:
+    name: transaction-query
+  jmx:
+    enabled: false
+  data:
+    mongodb:
+      host: localhost
+      port: 17017
+      database: transaction
+
+axon:
+  amqp:
+    exchange: bank.events
+  eventhandling:
+    processors:
+      amqpEvents:
+        source: complaintEventsMethod

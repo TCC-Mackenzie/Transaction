@@ -1,14 +1,12 @@
 package tcc.bank.transaction.dto;
 
-import tcc.bank.transaction.service.model.enums.TransactionType;
-
 import java.math.BigDecimal;
 import java.util.Date;
 
 public class TransactionDTO {
     private Date date;
 
-    private TransactionType type;
+    private Integer type;
 
     private BigDecimal value;
 
@@ -16,7 +14,7 @@ public class TransactionDTO {
 
     public TransactionDTO() { }
 
-    public TransactionDTO(Date date, TransactionType type, BigDecimal value, Integer accountId) {
+    public TransactionDTO(Date date, Integer type, BigDecimal value, Integer accountId) {
         this.date = date;
         this.type = type;
         this.value = value;
@@ -31,11 +29,11 @@ public class TransactionDTO {
         this.date = date;
     }
 
-    public TransactionType getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(TransactionType type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 

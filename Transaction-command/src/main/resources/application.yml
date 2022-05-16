@@ -27,3 +27,7 @@ spring:
     url: jdbc:mysql://localhost:3306/transaction?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&sslMode=DISABLED&useLegacyDatetimeCode=false&serverTimezone=GMT-3
     username: root
     password: root
+
+axon:
+  amqp:
+    exchange: bank.events
